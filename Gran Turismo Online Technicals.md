@@ -2,7 +2,7 @@
 
 This document explains the complete working path from installing the project to finishing an online race and returning to the Gran Turismo 4 Online menu.
 
-It describes what the game expects at every stage and what the GT4 Multiplayer app supplies so the game can continue. It contains no personal account names, private addresses, device identities, network IDs, file paths, passwords, invitation keys, logs, or signing secrets.
+It describes what the game expects at every stage and what the GT4 Multiplayer app supplies so the game can continue
 
 ## Supported game build
 
