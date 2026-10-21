@@ -1,4 +1,4 @@
-# GT4 Multiplayer (Gran Turismo 4)
+# GT4 Multiplayer (Gran Turismo 4 Online)
 
 GT4 Multiplayer is a Windows launcher and local server package for the Gran Turismo 4 USA Online Beta. It makes the original online menus usable again through either a private ZeroTier network or a trusted local router.
 
