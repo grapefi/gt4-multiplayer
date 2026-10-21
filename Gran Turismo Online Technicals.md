@@ -413,21 +413,15 @@ GT4 needs orderly logout or channel leave responses if the player exits Online e
 
 MUIS removes the active account and channel membership when the game logs out or disconnects. The host backend remains available for other authenticated players until the host closes the session.
 
-### What allows progress
+### Result
 
 GT4 returns to its normal main menu. A player can re enter Online while the host session is still alive, following the same DNAS and login stages.
 
 ## Step 26: Closing the game and app
 
-### What the game needs
-
 No further service is required after PCSX2 exits and the private session is finished.
 
-### What the app supplies
-
 The launcher closes its owned backend processes, private session sockets, monitors, and temporary control state. Sensitive invitation and session key material is cleared from active objects when the session is disposed.
-
-### What allows progress
 
 The private GT4 services stop listening when the app is closed. A later match starts a fresh authenticated launcher session and performs the readiness checks again.
 
