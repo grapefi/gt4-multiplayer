@@ -16,7 +16,7 @@ ZeroTier is for computers on different internet connections. Every player joins 
 
 Local Router LAN is for computers on the same trusted physical router.
 
-The launcher detects the selected Windows network adapter and gives PCSX2 the matching adapter identity. The other network methods from the private development builds are not present in this release.
+The launcher detects the selected Windows network adapter and gives PCSX2 the matching adapter identity.
 
 3. THE LOCAL ONLINE SERVICES
 
@@ -42,7 +42,7 @@ The host starts the services and logs in first. The joiner uses the invite to se
 
 This public release starts with no personal account database.
 
-Every person registers a new Gran Turismo account in the game. The account belongs to that server installation. No account from the private test build is included.
+Every person registers a new Gran Turismo account in the game. The account belongs to that server installation.
 
 6. LOBBIES AND RACES
 
@@ -50,7 +50,7 @@ The Horizon login and lobby stages use the server running on the host.
 
 When a race is created the server gives each game client the addresses and ports needed for the race session.
 
-The confirmed working build contains the race join corrections used during the successful two computer tests. These corrections preserve the reachable private address rather than returning the internal PS2 address shown by the old game error screen.
+The confirmed working build contains the race join corrections. These corrections preserve the reachable private address rather than returning the internal PS2 address shown by the old game error screen.
 
 Once the race is running the game sends time sensitive race traffic through PCSX2 on the selected ZeroTier or local router adapter.
 
@@ -60,11 +60,11 @@ The host owns the active local online service and creates the first live server 
 
 Logging in on the host first makes sure registration, lobby and race services are ready before the joiner asks for them. This avoids a connection race during startup.
 
-When the host launches a game, wait about 20-30 seconds for it to connect then it will launch the game, and anytime after that the rest can join, just make sure the host logs into online and passes the dnas check before any of the joiners
+When the host launches a game, wait about 20-30 seconds for it to connect then it will launch the game, and anytime after that the rest can join & launch, just make sure the host logs into online and passes the dnas check before any of the joiners
 
 8. SECURITY AND PRIVACY
 
-The invite contains connection information for the private session. It does not contain a Gran Turismo password.
+The invite contains connection information for the private session.
 
 ZeroTier access is controlled by the owner of the private ZeroTier network. A device must join the network and be authorized before it can reach the host through that network.
 
@@ -72,7 +72,7 @@ Local Router LAN accepts traffic from the trusted local network and should only 
 
 The signed release manifest checks every app file shipped by the installer before anything is installed.
 
-No game image, BIOS, memory card, account, save, ZeroTier Network ID, log, Windows user name or personal path is included in the public release.
+No game image (ISO), BIOS, memory card, account or save is included in the public release.
 
 9. HOW TO REPLICATE IT
 
@@ -87,11 +87,5 @@ Build the DNAS compatibility service.
 Place PCSX2 2.8.2 in the runtime folder and preserve its license.
 
 Create a clean payload with the launcher, PCSX2 runtime, Horizon runtime, DNAS runtime, assets, licenses and documentation.
-
-Do not add an ISO, BIOS, memory card, account database, ZeroTier Network ID, log or machine specific configuration.
-
-Sign the clean payload manifest with your own release key. Never publish the private signing key.
-
-Use the installer source to import and verify each user owned ISO and BIOS during installation.
 
 The exact build commands and source layout are in SOURCE BUILD.txt inside the Source folder.
