@@ -4,7 +4,7 @@ HOW GRAN TURISMO BULGARIA ONLINE BETA WORKS
 
 This release only supports the Gran Turismo 4 USA Online Beta.
 
-The installer checks the full SHA256 hash of the ISO. It accepts the supported original dump or the exact prepared image used by the confirmed working race build.
+The installer checks the full SHA256 hash of the ISO. It accepts the supported original dump ISO
 
 If the original dump is selected the installer copies it and changes ten known bytes in the copy. These changes select the DNAS compatibility path used by this setup. The original ISO is never edited.
 
@@ -20,7 +20,7 @@ The launcher detects the selected Windows network adapter and gives PCSX2 the ma
 
 3. THE LOCAL ONLINE SERVICES
 
-The original public Online Beta services no longer exist. This package starts compatible local replacements when a match is launched.
+The original public Online Beta services no longer exist. This package starts compatible local replacements when a Hosted game is launched.
 
 The DNAS service handles the game authentication step on local TCP port 443.
 
@@ -59,6 +59,8 @@ Once the race is running the game sends time sensitive race traffic through PCSX
 The host owns the active local online service and creates the first live server session.
 
 Logging in on the host first makes sure registration, lobby and race services are ready before the joiner asks for them. This avoids a connection race during startup.
+
+When the host launches a game, wait about 20-30 seconds for it to connect then it will launch the game, and anytime after that the rest can join, just make sure the host logs into online and passes the dnas check before any of the joiners
 
 8. SECURITY AND PRIVACY
 
