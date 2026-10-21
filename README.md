@@ -15,7 +15,7 @@ There is also a read me explaining exactly how it works so you can recreate this
 5. ZeroTier installed on every computer for play across different internet connections
 6. The same GT4 Multiplayer release on every computer
 
-You need the Gran Turismo 4 USA Online Public Beta ISO:
+You need your own copy of Gran Turismo 4 USA Online Public Beta ISO:
 - Disc ID: SCUS-97436
 - Version: 1.00
 - Exact size: 2,654,109,696 bytes
