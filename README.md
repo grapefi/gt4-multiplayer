@@ -89,6 +89,7 @@ The host must enter GT Online before the joining players. This order is importan
 5. Create an invite and copy the complete invite text
 6. Send the invite to the other player through a method you trust
 7. Launch the host game
+8. Wait 15-30 Seconds for the game to connect & launch
 8. Open **Online** inside Gran Turismo 4
 9. Register a new Gran Turismo account if this server does not already have your account
 10. Log in and wait at the GT Online menu
