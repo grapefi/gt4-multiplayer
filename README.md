@@ -215,6 +215,7 @@ More technical detail is available in [HOW IT WORKS.txt](HOW%20IT%20WORKS.txt). 
 ## Important notes
 
 Thanks to PCSX2 for making PS2/PC emulation awesome
+And Thanks to Zero Tier for helping gamers play online
 
 This release supports the Gran Turismo 4 USA Online Beta only.
 
