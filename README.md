@@ -2,7 +2,7 @@
 
 GT4 Multiplayer is a Windows launcher and local server package for the Gran Turismo 4 USA Online Beta. It makes the original online menus usable again through either a private ZeroTier network or a trusted local router.
 
-This project includes the launcher, PCSX2, the compatible local online services, the installer, and the source code. It does not include Gran Turismo 4, a PlayStation 2 BIOS, memory cards, accounts, saves, private network details, or personal files.
+This project includes the launcher, PCSX2, the compatible local online services, the installer, and the source code. It does not include Gran Turismo 4, a PlayStation 2 BIOS, memory cards, accounts, saves.etc
 
 ## What you need
 
