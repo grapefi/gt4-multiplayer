@@ -211,6 +211,8 @@ More technical detail is available in [HOW IT WORKS.txt](HOW%20IT%20WORKS.txt). 
 
 ## Important notes
 
+Thanks to PCSX2 for making PS2/PC emulation awesome
+
 This release supports the Gran Turismo 4 USA Online Beta only.
 
 Every computer must use the same release and a supported matching game image.
@@ -219,4 +221,4 @@ The host must log into Online before the joiner.
 
 Youtube: https://www.youtube.com/@GTBulgariaOnline
 
-This is an unofficial community project. It is not connected with or endorsed by Sony, Polyphony Digital, PlayStation, or ZeroTier.
+This is an unofficial community project. It is not connected with or endorsed by Sony, Polyphony Digital, PlayStation, PCSX2 or ZeroTier.
