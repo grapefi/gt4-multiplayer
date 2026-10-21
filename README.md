@@ -209,4 +209,6 @@ Every computer must use the same release and a supported matching game image.
 
 The host must log into Online before the joiner.
 
+Youtube: https://www.youtube.com/@GTBulgariaOnline
+
 This is an unofficial community project. It is not connected with or endorsed by Sony, Polyphony Digital, PlayStation, or ZeroTier.
