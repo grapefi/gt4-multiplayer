@@ -174,6 +174,8 @@ Use a unique account name for each computer. New installations start with no per
 
 Connect the controller before launching PCSX2. Close other controller mapping tools that may claim the same device. Open the launcher controller settings and refresh the connected devices before starting again.
 
+You can also press ESC in-game to bring up the PCSX2 Menu and then go to settings, Controller to adjust emulator controller settings.
+
 ## Verify the downloads
 
 Release v0.18.30 has these SHA256 checksums:
