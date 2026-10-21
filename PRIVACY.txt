@@ -1,0 +1,21 @@
+PUBLIC RELEASE PRIVACY CHECK
+
+This release does not contain a game ISO.
+
+This release does not contain a PS2 BIOS.
+
+This release does not contain a memory card or save.
+
+This release does not contain a Gran Turismo account or password.
+
+This release does not contain a ZeroTier Network ID or device identity.
+
+This release does not contain a support ZIP or gameplay log.
+
+This release does not contain a Windows user name or personal file path.
+
+This release does not contain the private release signing key.
+
+The installer imports the game ISO and BIOS selected by the person installing it. Those files stay on that computer.
+
+The launcher stores that computer's own settings inside its installation and data folders.

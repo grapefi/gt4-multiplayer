@@ -1,0 +1,43 @@
+SOURCE BUILD GUIDE
+
+1. REQUIREMENTS
+
+Use 64 bit Windows 11.
+
+The launcher and installer target the Windows .NET Framework compiler included with Windows.
+
+PCSX2 and the server components keep their own upstream licenses.
+
+2. BUILD THE LAUNCHER
+
+Open PowerShell in Source\Launcher.
+
+Run .\build.ps1
+
+The launcher and packet bridge are written to Source\bundle.
+
+3. BUILD THE INSTALLER
+
+Create and sign the Payload folder first.
+
+Open PowerShell in Source\Installer.
+
+Run .\build.ps1
+
+Keep the built Setup EXE beside the signed Payload folder.
+
+4. BACKEND SOURCE
+
+The PSHome MultiServer Source folder contains the complete backend source used for this release.
+
+The Backend Changes folder contains the local files that differ from the upstream revision noted in UPSTREAM.txt.
+
+The DNAS Source folder contains the DNAS compatibility service source distributed with this release.
+
+5. CLEAN RELEASE RULES
+
+Never put an ISO, BIOS, memory card, account database, ZeroTier Network ID, log, support ZIP, machine path or private signing key into Payload.
+
+Use the installer import process for the ISO and BIOS.
+
+Scan the final ZIP before publishing it.

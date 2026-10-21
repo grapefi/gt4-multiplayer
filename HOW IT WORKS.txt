@@ -1,0 +1,95 @@
+HOW GRAN TURISMO BULGARIA ONLINE BETA WORKS
+
+1. THE GAME VERSION
+
+This release only supports the Gran Turismo 4 USA Online Beta.
+
+The installer checks the full SHA256 hash of the ISO. It accepts the supported original dump or the exact prepared image used by the confirmed working race build.
+
+If the original dump is selected the installer copies it and changes ten known bytes in the copy. These changes select the DNAS compatibility path used by this setup. The original ISO is never edited.
+
+2. THE LAUNCHER
+
+The launcher gives two network choices.
+
+ZeroTier is for computers on different internet connections. Every player joins the same private ZeroTier network and gets a private ZeroTier address.
+
+Local Router LAN is for computers on the same trusted physical router.
+
+The launcher detects the selected Windows network adapter and gives PCSX2 the matching adapter identity. The other network methods from the private development builds are not present in this release.
+
+3. THE LOCAL ONLINE SERVICES
+
+The original public Online Beta services no longer exist. This package starts compatible local replacements when a match is launched.
+
+The DNAS service handles the game authentication step on local TCP port 443.
+
+The Horizon service handles registration, login, friends, rooms, matchmaking and the move from a lobby into a race.
+
+The important game service ports are TCP 10071, TCP 10073, TCP 10075, UDP 10070 and the race traffic ports used by the Horizon DME service.
+
+The launcher writes the selected private adapter address into temporary service configuration before starting the services. This means the services advertise the host address that the other computers can actually reach.
+
+4. HOW THE GAME FINDS THE SERVICES
+
+The launcher configures the PCSX2 network device for the selected adapter.
+
+It also supplies the Online Beta host mappings needed by the game so the old service names resolve to the local host service instead of dead public servers.
+
+The host starts the services and logs in first. The joiner uses the invite to select the same private network and host address. The joiner then starts the game and reaches the service running on the host computer.
+
+5. ACCOUNTS
+
+This public release starts with no personal account database.
+
+Every person registers a new Gran Turismo account in the game. The account belongs to that server installation. No account from the private test build is included.
+
+6. LOBBIES AND RACES
+
+The Horizon login and lobby stages use the server running on the host.
+
+When a race is created the server gives each game client the addresses and ports needed for the race session.
+
+The confirmed working build contains the race join corrections used during the successful two computer tests. These corrections preserve the reachable private address rather than returning the internal PS2 address shown by the old game error screen.
+
+Once the race is running the game sends time sensitive race traffic through PCSX2 on the selected ZeroTier or local router adapter.
+
+7. WHY THE HOST LOGS IN FIRST
+
+The host owns the active local online service and creates the first live server session.
+
+Logging in on the host first makes sure registration, lobby and race services are ready before the joiner asks for them. This avoids a connection race during startup.
+
+8. SECURITY AND PRIVACY
+
+The invite contains connection information for the private session. It does not contain a Gran Turismo password.
+
+ZeroTier access is controlled by the owner of the private ZeroTier network. A device must join the network and be authorized before it can reach the host through that network.
+
+Local Router LAN accepts traffic from the trusted local network and should only be used on a home network you trust.
+
+The signed release manifest checks every app file shipped by the installer before anything is installed.
+
+No game image, BIOS, memory card, account, save, ZeroTier Network ID, log, Windows user name or personal path is included in the public release.
+
+9. HOW TO REPLICATE IT
+
+Start with the supplied launcher source, the supplied DNAS source and the corresponding PSHome MultiServer source information.
+
+Build the Windows x64 launcher and packet bridge with the supplied build script.
+
+Build the Horizon server with the supplied GT4 address, lobby and race join changes.
+
+Build the DNAS compatibility service.
+
+Place PCSX2 2.8.2 in the runtime folder and preserve its license.
+
+Create a clean payload with the launcher, PCSX2 runtime, Horizon runtime, DNAS runtime, assets, licenses and documentation.
+
+Do not add an ISO, BIOS, memory card, account database, ZeroTier Network ID, log or machine specific configuration.
+
+Sign the clean payload manifest with your own release key. Never publish the private signing key.
+
+Use the installer source to import and verify each user owned ISO and BIOS during installation.
+
+The exact build commands and source layout are in SOURCE BUILD.txt inside the Source folder.
